@@ -32,17 +32,17 @@ class AboutHashes < Neo::Koan
     # rather than used as a literal?
   end
 
-  #def test_accessing_hashes_with_fetch
-  #  hash = { :one => "uno" }
-  #  assert_equal "uno", hash.fetch(:one)
-  #  assert_raise(___) do
-  #    hash.fetch(:doesnt_exist)
-  #  end
+  def test_accessing_hashes_with_fetch
+    hash = { :one => "uno" }
+    assert_equal "uno", hash.fetch(:one)
+    assert_raise(KeyError) do
+      hash.fetch(:doesnt_exist)
+    end
 
     # THINK ABOUT IT:
     #
     # Why might you want to use #fetch instead of #[] when accessing hash keys?
-  #end
+  end
 
 
   def test_hash_is_unordered
